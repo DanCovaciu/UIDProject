@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" type="text/css" href="./CSS/global.css">
+<link rel="stylesheet" type="text/css" href="./CSS/game.css" media="screen">
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -12,7 +13,6 @@
     <div class="w3-bar w3-white w3-padding w3-card">
         <a href="#home" class="w3-bar-item w3-button">Solarium</a>
         <img src="images/sun.png" style="height:40px"/>
-        <!-- Right-sided navbar links. Hide them on small screens -->
         <div class="w3-right w3-hide-small">
             <a href="./index.html" class="w3-bar-item w3-button">Home</a>
             <a href="./about.html" class="w3-bar-item w3-button">About</a>
@@ -25,7 +25,7 @@
                     <a href="#" class="w3-bar-item w3-button">Energy consumption</a>
                     <a href="./customizer.html" class="w3-bar-item w3-button">Customize</a>
                     <a href="#" class="w3-bar-item w3-button">Monitor House</a>
-                    <a href="./flappypanel.html" class="w3-bar-item w3-button">Flappy Panel</a>
+                    <a href="#" class="w3-bar-item w3-button">Flappy Panel</a>
                     <a href="#" class="w3-bar-item w3-button">Productivity</a>
                 </div>
             </div>
@@ -35,34 +35,26 @@
 </div>
 
 <!-- Page content -->
-<div class="w3-content">
-
     <!-- Contact Section -->
-    <div class="w3-container w3-padding-64" id="contact">
-        <h1>Contact</h1><br>
-        <p>We offer the best solutions when it comes to solar power. Do not hesitate to contact us for more
-            infromation.</p>
-        <p class="w3-text-blue-grey w3-large"><b>Solarium HQ, str. Dorobanților, nr. 45</b></p>
-        <p>You can also contact us by phone 0744444444 or email contact@solarium.com, or you can send us a message
-            here:</p>
-        <form>
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-            <p><input class="w3-input w3-padding-16" type="number" placeholder="Email" required name="Email"></p>
-            <p><textarea class="w3-input w3-padding-16" type="text" placeholder="Message" required
-                         name="Message"></textarea></p>
-            <p>
-                <button class="w3-button w3-black w3-section" type="submit">SEND MESSAGE</button>
-            </p>
-        </form>
+    <div class="wrapper" id ="gameContent">
+        <div id="menu" class="main">
+          <div id="main">
+            <h1>Flappy Panel</h1>
+            <ul>
+              <li><a href="#" class="button play">Start Game</a></li>
+              <li><a href="#" class="button credits">Leaderboard</a></li>
+              <li><a href="#" class="button settings">Settings</a></li>
+            </ul>
+          </div>
+        </div>
+    <canvas id="gameCanvas" width="512" height="512"></canvas>
+    <div id="game-over">
+        <h2>Your score: <span id="score"></span></h2>
+        <a href="javascript:void(0)" class="button restart">Try again?</a>
+      </div>
     </div>
-
     <!-- End page content -->
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-dark-grey w3-padding-32" id="footer">
-    <p><a href="#" title="Solarium" target="_blank" class="w3-hover-text-green">&copy Solarium</a></p>
-</footer>
 
 </body>
+<script src = "JS/flappypanel.js"></script>
 </html>
