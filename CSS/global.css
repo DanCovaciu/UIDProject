@@ -32,3 +32,93 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;     
   height: 10%;
 }
+
+div#chat {
+    border: 1px solid rgb(252, 166, 69);
+    border-bottom: none;
+    width: 300px;
+    height: 30px;
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+div#chat footer {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+div#div_message {
+    position: absolute;
+    bottom: 0px;
+    height: 30px;
+    border-top: 1px solid gray;
+    width: 298px;
+}
+
+#div_message button {
+    float: right;
+    height: 29px;
+    margin: 0px 5px;
+}
+
+#div_message input {
+    height: 29px;
+    width: 227px;
+    float: right;
+}
+
+div#chat img#close_chat {
+    width: 30px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+#messages_container {
+    max-height: 270px;
+    overflow: scroll;
+}
+
+div.message {
+    margin-top: 8px;
+}
+
+/* Keep some space between the last message displayed and the input bar */
+div.message:last-of-type {
+    margin-bottom: 10px;
+}
+
+div.message_content {
+    background-color: white;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+div.timestamp {
+    color: gray;
+    font-style: italic;
+    font-size: 12px;
+}
+
+div.message_user {
+    margin-left: 40px;
+    margin-right: 5px;
+    text-align: right;
+}
+
+.message_user .message_content {
+    border: 1px solid rgb(3, 88, 163);
+}
+
+div.message_computer {
+    margin-left: 5px;
+    margin-right: 40px;
+}
+
+.message_computer .message_content {
+    border: 1px solid rgb(252, 166, 69);
+}
