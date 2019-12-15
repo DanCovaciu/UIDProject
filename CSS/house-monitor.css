@@ -1,0 +1,36 @@
+.btns button {
+  background-color: #9acd32; 
+  border: 1px solid yellow; 
+  color: white; 
+  cursor:  url("https://findicons.com/files/icons/351/beach/128/sun.png"), auto;
+  align-content:center;
+  width: 100%; 
+  display: block; 
+  padding: 10px 24px;
+  margin: 13px 12px 12px 10px;  
+}
+
+.btns button:hover {
+  background-color: #32cd32;
+}
+
+.btns {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#modal1 {
+  height: 70%;	
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+}
