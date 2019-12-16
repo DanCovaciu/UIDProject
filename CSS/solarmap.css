@@ -1,3 +1,7 @@
+body {
+    width: 1280px;
+}
+
 img#world_map {
     margin-top: 70px;
     max-height: 100%;
