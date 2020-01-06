@@ -1,0 +1,111 @@
+[
+  {
+    "question": "When was solar power first used?",
+    "answers": [
+      "a. 20th century",
+      "b. 7th century BC",
+      "c. 19th century"
+    ],
+    "correctAnswer": "b",
+    "explanation": "It was first used in 7th century in the form of fire, by using magnifying glasses."
+  },
+
+  {
+    "question": "When was the first photovoltaic cell invented?",
+    "answers": [
+      "a. 1954",
+      "b. 1842",
+      "c. 2006"
+    ],
+    "correctAnswer": "a",
+    "explanation": "The first photovoltaic cell was invented in 1954 by Daryl Chapin, Calvin Fuller and Gerald Pearson."
+  },
+
+  {
+    "question": "What is the most abundant energy source on earth?",
+    "answers": [
+      "a. Solar power",
+      "b. Coal",
+      "c. Petrol"
+    ],
+    "correctAnswer": "a",
+    "explanation": "Solar power is the most abundant, it is everywhere, every day :)."
+  },
+
+  {
+    "question": "How much does a solar power plant last on average?",
+    "answers": [
+      "a. 10 years",
+      "b. 5 years",
+      "c. 40+ years"
+    ],
+    "correctAnswer": "c",
+    "explanation": "Solar power plants are quite durable with a life expectancy of over 40 years."
+  },
+
+  {
+    "question": "Who is the worldwide leader in usage of solar power?",
+    "answers": [
+      "a. China",
+      "b. India",
+      "c. Russia"
+    ],
+    "correctAnswer": "a",
+    "explanation": "China takes the lead in usage of solar power, being well ahead of the second country on the list."
+  },
+
+  {
+    "question": "How many solar systems were installed in 2017 in the US?",
+    "answers": [
+      "a. Around 500 thousand",
+      "b. Around 2 million",
+      "c. Around 50 million"
+    ],
+    "correctAnswer": "b",
+    "explanation": "It is expected that over 2 million solar power systems were installed in 2017 in the US alone."
+  },
+
+  {
+    "question": "How much time is required for solar panel owners to cover their cost, on average?",
+    "answers": [
+      "a. Around 10 years",
+      "b. Around 7 years",
+      "c. Around 3 years"
+    ],
+    "correctAnswer": "c",
+    "explanation": "As of now, it takes a solar panel owner around 3 years to recover their costs but that number is expected to drop."
+  },
+
+  {
+    "question": "What percentage from the total energy produced worldwide was solar?",
+    "answers": [
+      "a. 1%",
+      "b. 3%",
+      "c. 10%"
+    ],
+    "correctAnswer": "a",
+    "explanation": "Unfortunately only 1% of the total energy produced is solar, the leader being the fossil fuels."
+  },
+
+  {
+    "question": "What is the price/kW for solar power estimated for the end of 2020?",
+    "answers": [
+      "a. 1 cent",
+      "b. 1 dollar",
+      "c. 50 cents"
+    ],
+    "correctAnswer": "a",
+    "explanation": "The price is expected to drop to 1 cent/kW. Now that's cheap!"
+  },
+
+  {
+    "question": "How much can plane fly using only solar power?",
+    "answers": [
+      "a. 3000 km",
+      "b. 2500 km",
+      "c. Around the world"
+    ],
+    "correctAnswer": "c",
+    "explanation": "Given the right conditions, a plane can fly around the world using only solar power."
+  }
+]
