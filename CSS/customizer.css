@@ -1,10 +1,31 @@
-#componentPanel, #selectionsPanel {
+#componentPanel {
   float: left;
   width: 500px;
   height: 300px;
   margin: 10px;
   padding: 10px;
   border: 1px solid black;
+  margin-left: 30px;
+}
+
+#selectionsPanel {
+  float: left;
+  width: 500px;
+  height: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  margin-right: 30px;
+}
+
+h1 {
+	font-size: 30px;
+    text-align: center;
+}
+
+#description {
+	font-size: 17px;
+    text-align: center;
 }
 
 #solar-panel, #solar-tank {
@@ -13,17 +34,68 @@
 }
 
 #computeCostButton {
-  background-color: #E6FF0D; 
-  width: 20%;
+  background-color: #E6FF0D;
   border: none;
-  color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   font-size: 16px;
-  margin-left: 10px;
-  border-radius: 8px;
-  display: center;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 20%;
+  margin-left: -40px;
+}
+
+#computeCostButton:active {
+  background-color: #E6FF0D;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#price {
+	width: 120px;
+	margin-left: 27px;
+}
+
+span {
+	margin-left: -40px;
+}
+
+#userActions {
+	text-align: center;
 }
 
 input {
 	background-color: white;
 }
 
+#modalNoPieces {
+  width: 250px;
+  height: 150px;
+  position: absolute;
+  left: 48%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-color: black;
+  background-color: white;
+  text-align: center;
+  border-width: thin;
+}
+
+#modalHeader {
+	background-color: #E6FF0D;
+	font-size: 15px;
+	margin-top: -1px;
+	border-color: black;
+	border-style: solid;
+	border-width: thin;
+}
+
+#nopieces {
+	border-color: black;
+	border-width: thin;
+}

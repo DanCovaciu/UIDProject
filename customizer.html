@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" type="text/css" href="./CSS/global.css">
 <link rel="stylesheet" type="text/css" href="./CSS/customizer.css">
+<SCRIPT type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></SCRIPT>
 <script src="JS/customizer.js" type="text/javascript"></script>
 </html>
 
@@ -42,25 +43,40 @@
 <div class="w3-content">
     <div class="w3-row w3-padding-64" id="about">
         <h1> House Customizer </h1>
-        <p>
+        <p id="description">
             The best way to get an estimate of the most common components you may need while designing your
             energy-efficient, solar powered house.
         </p>
 
         <div id="componentPanel" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <img src="./images/solarpanel.png" draggable="true" ondragstart="drag(event)" id="solar-panel">
+			<div id="item1" draggable="true" ondragstart="drag(event)">
+				<img src="./images/solarpanel.png" id="solar-panel">
+				<p> solar panel </p>
+			</div>
+            
             <img src="./images/solar-tank.png" draggable="true" ondragstart="drag(event)" id="solar-tank">
         </div>
 
         <div id="selectionsPanel" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <br/> <br/>
+        <br/> <br/> 
 
         <div id="userActions">
+			<br/> 
+			<br/> 
             <button id="computeCostButton">Compute cost</button>
-            Total price: <input type="text" name="price" disabled="disabled">
+			<br/>
+            <span> Total price: </span>
+			<input type="text" name="price" id="price" disabled="disabled">
         </div>
 
     </div>
+	
+	<div id="modalNoPieces">
+		<p id="modalHeader"> How many pieces? </p>
+		<input type="text" name="pieces" id="nopieces">
+		<br/> <br/> 
+		<button type="button" id="continue" onclick="return false">Continue</button>
+	</div>
 </div>
 
 <!-- Footer -->
