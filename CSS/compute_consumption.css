@@ -1,0 +1,27 @@
+select {
+    margin-left: 10px;
+}
+
+span.title {
+    font-weight: bold;
+}
+
+
+input.input_with_appended_unit {
+    margin-left: 10px;
+    padding-right: 35px;
+    text-align: right;
+}
+
+span.appended_unit {
+    position: relative;
+    left: -30px;
+    font-family: sans-serif; /* Optional, just styling it so it looks nicer */
+    font-size: 12px; /* Optional, just styling it so it looks nicer */
+    color: gray;
+}
+
+div.error_line {
+    color: red;
+    font-style: italic;
+}

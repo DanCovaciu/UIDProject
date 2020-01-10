@@ -1,5 +1,6 @@
 body {
     width: 1280px;
+    align-content: center;
 }
 
 img#world_map {
