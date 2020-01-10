@@ -27,7 +27,7 @@
                     <a href="#" class="w3-bar-item w3-button">Quiz</a>
                     <a href="./solarmap.html" class="w3-bar-item w3-button">Solar Map</a>
                     <a href="#" class="w3-bar-item w3-button">Track progress</a>
-                    <a href="#" class="w3-bar-item w3-button">Energy consumption</a>
+                    <a href="./compute_consumption.html" class="w3-bar-item w3-button">Energy consumption</a>
                     <a href="./customizer.html" class="w3-bar-item w3-button">Customize</a>
                     <a href="#" class="w3-bar-item w3-button">Monitor House</a>
                     <a href="./flappypanel.html" class="w3-bar-item w3-button">Flappy Panel</a>
@@ -44,6 +44,15 @@
     <div class="w3-container w3-padding-64" id="contact">
         <p>Compute your annual energy consumption by providing information about your home appliances.</p>
         <div id="dropdowns"></div>
+        <div id="buttons">
+            <button id="compute" onclick="compute()">Compute consumption</button>
+            <button id="reset" onclick="reset()">Reset</button>
+        </div>
+        <div id="computation_result" hidden>
+            <p>Your annual consumption is <span id="result">3</span> kWh.</p>
+            <p>Your appliance with the highest energy consumption is "<span id="appliance"></span>", with a consumption of <span id="consumption"></span> kWh per year.</p>
+            <button onclick="return_to_editor()">Return to editor</button>
+        </div>
     </div>
 </div>
 

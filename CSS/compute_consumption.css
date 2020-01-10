@@ -1,5 +1,18 @@
 select {
     margin-left: 10px;
+    margin-right: 10px;
+}
+
+div#dropdowns {
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 30px;
+}
+
+div#computation_result {
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 30px;
 }
 
 span.title {
@@ -8,9 +21,17 @@ span.title {
 
 
 input.input_with_appended_unit {
-    margin-left: 10px;
+    margin-left: 5px;
     padding-right: 35px;
     text-align: right;
+    width: 100px;
+}
+
+input.input_with_appended_duration_unit {
+    margin-left: 5px;
+    padding-right: 90px;
+    text-align: right;
+    width: 115px;
 }
 
 span.appended_unit {
@@ -21,7 +42,44 @@ span.appended_unit {
     color: gray;
 }
 
+span.appended_duration_unit {
+    position: relative;
+    left: -80px;
+    font-family: sans-serif; /* Optional, just styling it so it looks nicer */
+    font-size: 12px; /* Optional, just styling it so it looks nicer */
+    color: gray;
+}
+
 div.error_line {
     color: red;
     font-style: italic;
+}
+
+div#buttons {
+    margin-top: 50px;
+}
+
+div#buttons button:hover {
+    background-color: white;
+}
+
+button#compute {
+    width: 200px;
+    color:blue;
+    border-color: blue;
+    border-width: 1px;
+    background-color: lightblue;
+}
+
+button#reset {
+    margin-left: 30px;
+    width: 200px;
+    color: red;
+    border-color: tomato;
+    border-width: 1px;
+    background-color: lightpink;
+}
+
+select.frequency {
+    margin-left: -15px;
 }
