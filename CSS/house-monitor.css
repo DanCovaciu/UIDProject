@@ -1,5 +1,6 @@
+/* buttons page styling */
 .btns button {
-  background-color: #9acd32; 
+  background-color: #1abc9c; 
   border: 1px solid yellow; 
   color: white; 
   cursor:  url("https://findicons.com/files/icons/351/beach/128/sun.png"), auto;
@@ -21,6 +22,8 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* read inverter page styling */
 
 #readInverter {
   height: 300px;	
@@ -54,4 +57,104 @@ h1 {
 
 #confirm, #cancel {
 	 background-color: #9acd32; 
+}
+
+/* data features page styling */
+
+#dataFeatures {
+  height: 500px;	
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+  text-align: center;
+  overflow: scroll;
+}
+
+#closeDataFeatures, #closeSolarProductionMonitor{
+	float: right;
+	margin-right: 3px;
+	cursor: pointer;
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#dataList li {
+  list-style-type: none;
+}
+
+.icon {
+	float: left;
+}
+
+hr {	
+  border-color: black;
+}
+
+
+.dataFeaturesParagraph {
+	margin-left: 80px;
+}
+
+/* Solar production monitor custom styling */
+
+.month {
+  padding: 10px 10px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+#hoursList {
+	float: left;
+}
+
+#energyValuesList {
+	float: right;
+	margin-right: 80px;
+}
+
+#hoursList li, #energyValuesList li, .month ul li {
+  list-style-type: none;
+}
+
+#solarProductionMonitor {
+  height: 500px;	
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+  text-align: center;
+  overflow: scroll;
 }
