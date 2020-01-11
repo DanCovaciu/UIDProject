@@ -45,13 +45,18 @@
 
 <!-- Page content -->
 <div class="w3-content">
+
     <div class="btns">
+		<h1> Monitor House </h1>
 		<button id="systemGenerationPowerButton">See system generation power</button>
 		<button id="readInverterButton">Provide index of consumption</button>
 		<button id="dataFeaturesButton">Data features</button>
 	</div>
-		
-	<div id="readInverter">
+	
+	<img src="./images/solar-house.png" id="solarHouse" alt="icon" height="400" width="400">
+	
+	
+	<div id="readInverter" hidden="true">
 	  <div id='close'>&times;</div> 
 	  <br/>
 	  <p>Provide your inverter data</p>
@@ -68,7 +73,7 @@
 	  <button id="cancel">Cancel</button>
 	</div>
 	
-	<div id="dataFeatures">
+	<div id="dataFeatures" hidden="true">
 		<div id='closeDataFeatures'>&times;</div> 
 		<br/>
 		<h3> System Data </h3>
@@ -105,7 +110,7 @@
 		</ul>
 	</div>
 	
-	<div id="solarProductionMonitor">
+	<div id="solarProductionMonitor" hidden="true">
 		<div id='closeSolarProductionMonitor'>&times;</div> 
 		<br/>
 		<h3> Solar Production Monitor </h3>
