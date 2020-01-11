@@ -1,21 +1,50 @@
 var oldValue = 100;
 
 jQuery(document).ready(function () {
+	// visibility of components
+	$("#solarProductionMonitor").hide();
     $("#readInverter").hide();
+	$("#dataFeatures").hide();
+	$(".btns").show();
+	
+	// click actions
 	$('#confirm').on('click', doOnConfirm);
 	$('#cancel').on('click', doOnCancel);
-	$("#rinverter").click(open_modal);
+	$("#readInverterButton").click(open_read_inverter_modal);
+	$("#dataFeaturesButton").click(open_system_data_modal);
+	$("#systemGenerationPowerButton").click(open_solar_production_monitor);
 	
 	$('#close').on('click', function() {
 		$(this).parent().fadeOut();
-		$(".btns").show();
+		$(".btns").fadeIn();
+	});
+	
+	$('#closeDataFeatures').on('click', function() {
+		$(this).parent().fadeOut();
+		$(".btns").fadeIn();
+	});
+	
+	$('#closeSolarProductionMonitor').on('click', function() {
+		$(this).parent().fadeOut();
+		$(".btns").fadeIn();
 	});
 });
 
-function open_modal() {
+function open_solar_production_monitor() {
+     $(".btns").hide();
+	 $("#solarProductionMonitor").show();
+}
+
+
+function open_read_inverter_modal() {
      $(".btns").hide();
 	 $("#readInverter").show();
 	 $("#oldIndex").val(oldValue);
+}
+
+function open_system_data_modal() {
+	$(".btns").hide();
+	$("#dataFeatures").show();
 }
 
 function doOnConfirm() {
