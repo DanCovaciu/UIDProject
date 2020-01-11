@@ -1,6 +1,6 @@
 /* buttons page styling */
 .btns button {
-  background-color: #1abc9c; 
+  background-color: #9acd32; 
   border: 1px solid yellow; 
   color: white; 
   cursor:  url("https://findicons.com/files/icons/351/beach/128/sun.png"), auto;
@@ -106,7 +106,7 @@ hr {
 .month {
   padding: 10px 10px;
   width: 100%;
-  background: #1abc9c;
+  background: #9acd32;
   text-align: center;
 }
 
@@ -147,7 +147,7 @@ hr {
 
 #solarProductionMonitor {
   height: 500px;	
-  width: 500px;
+  width: 550px;
   position: absolute;
   left: 50%;
   top: 50%;
