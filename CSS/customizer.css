@@ -34,7 +34,7 @@ h1 {
 }
 
 #computeCostButton {
-  background-color: #E6FF0D;
+  background-color: #9acd32;
   border: none;
   color: white;
   padding: 20px;
@@ -50,9 +50,8 @@ h1 {
 }
 
 #computeCostButton:active {
-  background-color: #E6FF0D;
   box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  transform: translateY(2px);
 }
 
 #price {
@@ -98,4 +97,16 @@ input {
 #nopieces {
 	border-color: black;
 	border-width: thin;
+}
+
+.list
+{ 
+  min-height: 120px;
+} 
+
+.list li
+{
+ display: inline-block;
+ list-style-type: none;
+ padding-right: 20px;
 }

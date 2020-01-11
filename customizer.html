@@ -11,6 +11,7 @@
 </html>
 
 <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -48,16 +49,38 @@
             energy-efficient, solar powered house.
         </p>
 
-        <div id="componentPanel" ondrop="drop(event)" ondragover="allowDrop(event)">
-			<div id="item1" draggable="true" ondragstart="drag(event)">
-				<img src="./images/solarpanel.png" id="solar-panel">
-				<p> solar panel </p>
+            <div id="componentPanel" class="fbox">
+				<ul id="sort1" class="list">
+				  <li class="draggable" >
+					<img src="./images/solarpanel.png" id="solar-panel"  height="50" width="60"/>
+					<p> solar panel </p>
+				  </li>
+				  <li class="draggable">
+					<img src="./images/solar-tank.png" id="solar-tank" height="50" width="60" />
+					<p> solar tank </p>
+				  </li class="draggable">
+				  <li class="draggable">
+					<img src="./images/battery.png" id="battery" height="50" width="60" />
+					<p> battery </p>
+				  </li>
+				  <li class="draggable">
+					<img src="./images/charge-controller.png" id="charge-controller" height="50" width="60" />
+					<p> charge controller </p>
+				  </li>
+				  <li class="draggable">
+					<img src="./images/inverter.png" id="inverter" height="50" width="60" />
+					<p> power inverter </p>
+				  </li>
+				  <li class="draggable">
+					<img src="./images/generator.png" id="generator" height="50" width="60" />
+					<p> generator </p>
+				  </li>
+				</ul>
 			</div>
-            
-            <img src="./images/solar-tank.png" draggable="true" ondragstart="drag(event)" id="solar-tank">
-        </div>
-
-        <div id="selectionsPanel" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  
+			<div id="selectionsPanel" class="fbox">
+			  <ul id="sort2" class="list"></ul>
+			</div>
         <br/> <br/> 
 
         <div id="userActions">
@@ -71,7 +94,7 @@
 
     </div>
 	
-	<div id="modalNoPieces">
+	<div id="modalNoPieces" hidden=true>
 		<p id="modalHeader"> How many pieces? </p>
 		<input type="text" name="pieces" id="nopieces">
 		<br/> <br/> 

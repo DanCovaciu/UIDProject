@@ -1,7 +1,7 @@
 var oldValue = 100;
-var dummyDataInitial = ["100 kWh", "20 kWh", "90 kWh", "120 kWh", "170 kWh"];
-var dummyDataNextDay = ["199 kWh", "230 kWh", "780 kWh", "120 kWh", "70 kWh"];
-var dummyDataPreviousDay = ["567 kWh", "342 kWh", "900 kWh", "1200 kWh", "170 kWh"];
+var dummyDataInitial = ["100 kW", "20 kW", "90 kW", "120 kW", "170 kW"];
+var dummyDataNextDay = ["199 kW", "230 kW", "780 kW", "120 kW", "70 kW"];
+var dummyDataPreviousDay = ["567 kW", "342 kW", "900 kW", "1200 kW", "170 kW"];
 
 $(document).ready(function () {
 	// click actions
@@ -184,11 +184,11 @@ function initialize(data){
 		data: [{
 			type: "column",
 			dataPoints: [
-				{ label: "08:00", y:  parseInt(a[0].replace(' kWh','')) },	
-				{ label: "12:00", y:  parseInt(a[1].replace(' kWh','')) },	
-				{ label: "16:00", y:  parseInt(a[2].replace(' kWh','')) },
-				{ label: "20:00", y:  parseInt(a[3].replace(' kWh','')) },
-				{ label: "00:00", y:  parseInt(a[4].replace(' kWh','')) }
+				{ label: "08:00", y:  parseInt(a[0].replace(' kW','')) },	
+				{ label: "12:00", y:  parseInt(a[1].replace(' kW','')) },	
+				{ label: "16:00", y:  parseInt(a[2].replace(' kW','')) },
+				{ label: "20:00", y:  parseInt(a[3].replace(' kW','')) },
+				{ label: "00:00", y:  parseInt(a[4].replace(' kW','')) }
 			]
 		}]
 	};

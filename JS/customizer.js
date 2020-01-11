@@ -1,32 +1,13 @@
 var count = 0;
 var details;
-
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-
-  details = $("#item1 p").val();
-  console.log(details);
-  count = count + 1;
-  if (count % 2 != 0){
-	  $('#nopieces').val('');
-	  $('#modalNoPieces').show();
-  }
-}
-
 var productQty;
 const prices = {
-    solarpanel: 200,
-	solartank: 700
+    solarPanel: 300,
+	solarTank: 700,
+	chargeController: 1000,
+	battery: 100,
+	powerInverter: 200,
+	generator: 400
 };
 var totalCost = 0;
 
@@ -36,13 +17,65 @@ $(document).ready(function (){
 
     $('#continue').on('click', validateQuantity);
 	$('#computeCostButton').on('click', computeCost);
+	
+	checkSelectionsPanel();
+
 });
+
+var currentItem;
+
+function checkSelectionsPanel() {
+	
+	$( "#sort1, #sort2" ).sortable({
+      helper:"clone", 
+      opacity:0.5,
+      cursor:"crosshair",
+      connectWith: ".list",
+      receive: function( event, ui ){ 
+	  
+		$('#nopieces').val('');
+		$('#modalNoPieces').show();
+		
+		//todo
+		//when qty is entered, attach it to <p> that contains the item name
+		
+		// no more than 10 at once
+         if($(ui.sender).attr('id')==='sort1' && $('#sort2').children('li').length> 10){
+           $(ui.sender).sortable('cancel');
+         }
+      }	
+	});
+	
+	$( "#sort1,#sort2" ).disableSelection();
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+		
+  currentItem = data;
+  details = $("#" + data + " p").text();
+  
+  console.log(details);
+  count = count + 1;
+  
+  if (count % 2 != 0){
+	  $('#nopieces').val('');
+	  $('#modalNoPieces').show();
+  }
+}
 
 function computeCost(){
 	console.log("Computing cost...");
-	totalCost += productQty;
+	totalCost += parseInt(productQty);
 	console.log(totalCost);
-	// take all the elements in the drop div
+	
+	var array = $('#sort2').get();
+	console.log(array);
+	
+	//todo
+	// take all the elements in the selections list
 	// take the <p> content from each one
 	// add the prices to totalCost depending on the item name taken from <p> tag
 	$('#price').val(totalCost);
@@ -57,6 +90,7 @@ function validateQuantity(){
 	else {
 		$('#nopieces').css("border-color" , "black");
 		productQty = $('#nopieces').val();
+		$("#" + currentItem + " p").text(details + " x" + productQty);
 		$('#modalNoPieces').hide();
 	}
 	
