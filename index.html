@@ -83,32 +83,11 @@
 
         <img id="close_chat" src="images/cross_orange_icon.png" hidden/>
 
-        <div id="messages_container" hidden>
-            <div class="message_computer message">
-                <div class="timestamp">2019-12-12 10:28:35</div>
-                <div class="message_content">Hello ! How can I help you ? Hello ! How can I help you ? Hello ! How can I help you ? Hello ! How can I help you ?</div>
-            </div>
-
-            <div class="message_user message">
-                <div class="timestamp">2019-12-12 10:28:35</div>
-                <div class="message_content">Hi, I would like to obtain some information about solar panels. Could you help me, please ?</div>
-            </div>
-
-            <div class="message_user message">
-                <div class="timestamp">2019-12-12 10:28:35</div>
-                <div class="message_content">Hellooooo...</div>
-            </div>
-
-            <div class="message_computer message">
-                <div class="timestamp">2019-12-12 10:28:35</div>
-                <div class="message_content">Hello ! How can I help you ? Hello ! How can I help you ? Hello ! How can I help you ? Hello ! How can I help you ?</div>
-            </div>
-
-        </div>
+        <div id="messages_container" hidden></div>
 
         <div id="div_message" hidden>
-            <button>Send</button>
-            <input type="text" placeholder="Type your message here.">
+            <button onclick="send()">Send</button>
+            <input type="text" placeholder="Type your message here." id="message">
         </div>
     </div>
 

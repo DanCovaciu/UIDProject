@@ -43,7 +43,16 @@
 
 <!-- Page content -->
 <div class="w3-content">
-
+    <h1>Solar panel productivity over the course of a day</h1>
+    <p>Use the slider below the image to move through the day!</p>
+    <p>Hover over the image to see useful information about the productivity at that certain point in the day!</p>
+    <div class="tooltip">
+        <img id="panelImage" height="500px" src="images/morning.png">
+        <span id="tooltipText" class="tooltiptext">In the morning, the panel productivity starts to rise as the sun rises to the sky. Best productivity is seen in panels which guide themselves after the sun.</span>
+    </div>
+    <div class="slidecontainer" id="sliderContainer">
+        <input type="range" min="1" max="4" value="1" class="slider" id="myRange">
+    </div>
 </div>
 
 <!-- Footer -->

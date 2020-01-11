@@ -80,6 +80,7 @@ div#chat img#close_chat {
 #messages_container {
     max-height: 270px;
     overflow: scroll;
+    padding-top: 20px;
 }
 
 div.message {
