@@ -44,9 +44,9 @@
 <!-- Page content -->
 <div class="w3-content">
     <div class="btns">
-		<button>See system generation power</button>
-		<button id="rinverter"> Read inverter</button>
-		<button>Data features</button>
+		<button id="systemGenerationPowerButton">See system generation power</button>
+		<button id="readInverterButton">Provide index of consumption</button>
+		<button id="dataFeaturesButton">Data features</button>
 	</div>
 		
 	<div id="readInverter">
@@ -65,6 +65,78 @@
 	  <button id="confirm">Confirm</button>
 	  <button id="cancel">Cancel</button>
 	</div>
+	
+	<div id="dataFeatures">
+		<div id='closeDataFeatures'>&times;</div> 
+		<br/>
+		<h3> System Data </h3>
+		<br/>
+		<hr>
+		<ul id="dataList">
+			<li> 
+				<img src="./images/electric-meter-icon.png" class="icon" alt="icon" height="50" width="60">
+				<h6> Current PV Power</h6>
+				<p class="dataFeaturesParagraph"> 28 mins ago </p>
+				<p class="dataFeaturesParagraph"> 612 W </p>
+				<hr>	
+			</li>
+			<li> 
+				<img src="./images/energy-icon.png" class="icon" alt="icon" height="60" width="60">
+				<h6> PV Energy </h6>
+				<p class="dataFeaturesParagraph"> Today </p>
+				<p class="dataFeaturesParagraph"> 9952 W </p>
+				<hr>
+			</li>
+			<li> 
+				<img src="./images/co2-icon.png" id="co2-icon" class="icon" height="50" width="60">
+				<h6> CO2 avoided </h6>
+				<p class="dataFeaturesParagraph"> Today </p>
+				<p class="dataFeaturesParagraph"> 7.0 kg</p>
+				<hr>
+			</li>
+			<li> 
+				<img src="./images/pv-panel-icon.png" class="icon" alt="icon" height="50" width="60">
+				<h6> PV System information </h6>
+				<p class="dataFeaturesParagraph"> PV System power: 10.40 kWp </p>
+				<p class="dataFeaturesParagraph"> Comissioning: 10/02/2020 </p>
+			</li>
+		</ul>
+	</div>
+	
+	<div id="solarProductionMonitor">
+		<div id='closeSolarProductionMonitor'>&times;</div> 
+		<br/>
+		<h3> Solar Production Monitor </h3>
+		<br/>
+		<div class="month">      
+		  <ul>
+			<li class="prev">
+				<button id="prevButton">&#10094;</button>
+			</li>
+			<li class="next">
+				<button id="nextButton">&#10095;</button>
+			</li>
+			<li>
+			  January 13 <br/>
+			  <span style="font-size:18px">2020</span>
+			</li>
+		  </ul>
+		</div>
+
+		<ul id="hoursList">
+			<li> Hour </li>
+			<li> 12:00 </li>
+			<li> 13:00 </li>
+			<li> 14:00 </li>
+		</ul>
+		<ul id="energyValuesList">
+			<li> Energy Value </li>
+			<li> 10 kWh </li>
+			<li> 18 kWh </li>
+			<li> 30 kWh </li>
+		</ul>
+	</div>
+	
 	
 </div>
 
