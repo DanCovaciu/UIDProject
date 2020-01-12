@@ -13,6 +13,7 @@ h3{
 }
 
 img#world_map {
+    margin-left: 30px;
     margin-top: 70px;
     max-height: 100%;
     max-width: 100%;
@@ -29,12 +30,12 @@ img.m_g:hover {
     margin-left: -10px;
     margin-top: -10px;
 }
-img#m_g_usa { top: 220px; left: 230px; }
-img#m_g_south_america { top: 480px; left: 350px; }
-img#m_g_europe { top: 210px; left: 630px; }
-img#m_g_africa { top: 380px; left: 630px; }
-img#m_g_asia { top: 250px; left: 850px; }
-img#m_g_oceania { top: 500px; left: 1030px; }
+img#m_g_usa { top: 220px; left: 260px; }
+img#m_g_south_america { top: 480px; left: 380px; }
+img#m_g_europe { top: 210px; left: 660px; }
+img#m_g_africa { top: 380px; left: 660px; }
+img#m_g_asia { top: 250px; left: 880px; }
+img#m_g_oceania { top: 500px; left: 1060px; }
 
 /* Close icons */
 img.close_icon {
