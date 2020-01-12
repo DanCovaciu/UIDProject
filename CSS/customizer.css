@@ -86,7 +86,7 @@ input {
 }
 
 #modalHeader {
-	background-color: #E6FF0D;
+	background-color: #9acd32;
 	font-size: 15px;
 	margin-top: -1px;
 	border-color: black;
@@ -109,4 +109,26 @@ input {
  display: inline-block;
  list-style-type: none;
  padding-right: 20px;
+}
+
+#componentsInfo {
+  margin: auto;
+  width: 500px;
+  height: 300px;
+  border: 3px solid green;
+  padding: 10px;
+  transform: translate(50%, -146%);
+}
+
+#closeInfo{
+	float: right;
+	margin-right: 3px;
+	cursor: pointer;
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#showMore {
+	margin-right: 4%;
 }

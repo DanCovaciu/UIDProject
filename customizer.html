@@ -52,28 +52,28 @@
             <div id="componentPanel" class="fbox">
 				<ul id="sort1" class="list">
 				  <li class="draggable" >
-					<img src="./images/solarpanel.png" id="solar-panel"  height="50" width="60"/>
-					<p> solar panel </p>
+					<img src="./images/solarpanel.png" height="50" width="60"/>
+					<p id="solar-panel" >solar panel</p>
 				  </li>
 				  <li class="draggable">
-					<img src="./images/solar-tank.png" id="solar-tank" height="50" width="60" />
-					<p> solar tank </p>
+					<img src="./images/solar-tank.png" height="50" width="60" />
+					<p id="solar-tank">solar tank</p>
 				  </li class="draggable">
 				  <li class="draggable">
-					<img src="./images/battery.png" id="battery" height="50" width="60" />
-					<p> battery </p>
+					<img src="./images/battery.png" height="50" width="60" />
+					<p id="battery">battery</p>
 				  </li>
 				  <li class="draggable">
-					<img src="./images/charge-controller.png" id="charge-controller" height="50" width="60" />
-					<p> charge controller </p>
+					<img src="./images/charge-controller.png" height="50" width="60" />
+					<p id="charge-controller">charge controller</p>
 				  </li>
 				  <li class="draggable">
-					<img src="./images/inverter.png" id="inverter" height="50" width="60" />
-					<p> power inverter </p>
+					<img src="./images/inverter.png" height="50" width="60" />
+					<p id="inverter">power inverter</p>
 				  </li>
 				  <li class="draggable">
-					<img src="./images/generator.png" id="generator" height="50" width="60" />
-					<p> generator </p>
+					<img src="./images/generator.png" height="50" width="60" />
+					<p id="generator">generator</p>
 				  </li>
 				</ul>
 			</div>
@@ -86,12 +86,18 @@
         <div id="userActions">
 			<br/> 
 			<br/> 
+			<button id="showMore">Show more about the components</button>
+			<br/> 
             <button id="computeCostButton">Compute cost</button>
 			<br/>
             <span> Total price: </span>
 			<input type="text" name="price" id="price" disabled="disabled">
         </div>
 
+		<div id="componentsInfo" hidden=true>
+			<div id='closeInfo'>&times;</div> 
+			<img src="./images/details.jpg" height="250" width="400" />
+		</div>
     </div>
 	
 	<div id="modalNoPieces" hidden=true>

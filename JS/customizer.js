@@ -1,31 +1,29 @@
-var count = 0;
 var details;
 var productQty;
-const prices = {
-    solarPanel: 300,
-	solarTank: 700,
-	chargeController: 1000,
-	battery: 100,
-	powerInverter: 200,
-	generator: 400
-};
 var totalCost = 0;
 
 $(document).ready(function (){
 
     $('#modalNoPieces').hide();
-
     $('#continue').on('click', validateQuantity);
+	$('#showMore').on('click', showMoreAboutComponents);
 	$('#computeCostButton').on('click', computeCost);
 	
-	checkSelectionsPanel();
+	$('#closeInfo').on('click', function() {
+		$(this).parent().hide();
+	});
+	
+	viewSelectionsPanel();
 
 });
 
-var currentItem;
+function showMoreAboutComponents(){
+	$('#componentsInfo').show();
+}
 
-function checkSelectionsPanel() {
-	
+var item, optionsPanelItem;
+
+function viewSelectionsPanel() {
 	$( "#sort1, #sort2" ).sortable({
       helper:"clone", 
       opacity:0.5,
@@ -33,14 +31,28 @@ function checkSelectionsPanel() {
       connectWith: ".list",
       receive: function( event, ui ){ 
 	  
-		$('#nopieces').val('');
-		$('#modalNoPieces').show();
+	    // if the sender is list sort1 then open modal
+		if($(ui.sender).attr('id') ==='sort1'){
+			$('#nopieces').val('');
+			$('#modalNoPieces').show();
+		}
+		else {
+			// if the sender is list 2, keep only the items name
+			
+			var itemsList = $("#sort1").children().children('p');
+			console.log(itemsList);
+
+			var i;
+			for(i = 0; i < itemsList.length; i++){
+				console.log(itemsList[i].innerHTML);
+				if (arr.includes(itemsList[i].innerHTML)){
+					itemsList[i].innerHTML = arr[arr.indexOf(itemsList[i].innerHTML)].replace(/\x.*/,'');
+				}
+			}
+		}
 		
-		//todo
-		//when qty is entered, attach it to <p> that contains the item name
-		
-		// no more than 10 at once
-         if($(ui.sender).attr('id')==='sort1' && $('#sort2').children('li').length> 10){
+		// no more than 8 at once in the selections panel
+         if($(ui.sender).attr('id')==='sort1' && $('#sort2').children('li').length> 8){
            $(ui.sender).sortable('cancel');
          }
       }	
@@ -49,37 +61,37 @@ function checkSelectionsPanel() {
 	$( "#sort1,#sort2" ).disableSelection();
 }
 
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-		
-  currentItem = data;
-  details = $("#" + data + " p").text();
-  
-  console.log(details);
-  count = count + 1;
-  
-  if (count % 2 != 0){
-	  $('#nopieces').val('');
-	  $('#modalNoPieces').show();
-  }
-}
+var map = new Map([['solar panel', 300], ['solar tank', 700] ,['battery', 100],["charge controller", 1000],["power inverter", 200],["generator", 400]]); 
 
+var myMap = new Map(); 
+myMap.set('solar panel', 300);
+myMap.set('solar tank', 700);
+myMap.set('battery', 100);
+myMap.set('charge controller', 1000);
+myMap.set('power inverter', 200);
+myMap.set('generator', 400);
+ 
 function computeCost(){
 	console.log("Computing cost...");
-	totalCost += parseInt(productQty);
-	console.log(totalCost);
 	
-	var array = $('#sort2').get();
-	console.log(array);
+	var itemsList = $("#sort2").children().children('p');
+	console.log(itemsList);
+
+	var i;
+	for(i = 0; i < itemsList.length; i++){
+		console.log(itemsList[i].innerHTML);
+		var it = itemsList[i].innerHTML;
+		var key = it.substring(0, it.indexOf('x') + 'x'.length - 2);
+		console.log(key);
+		console.log(myMap.get(key));
+		totalCost += parseInt(productQty) * myMap.get(key) ;
+	}
 	
-	//todo
-	// take all the elements in the selections list
-	// take the <p> content from each one
-	// add the prices to totalCost depending on the item name taken from <p> tag
-	$('#price').val(totalCost);
+	console.log("TotalCost: ", totalCost);
+	$('#price').val(totalCost + " RON");
 }
+
+var arr = [];
 
 function validateQuantity(){
     var qty = document.getElementById("nopieces");
@@ -90,7 +102,20 @@ function validateQuantity(){
 	else {
 		$('#nopieces').css("border-color" , "black");
 		productQty = $('#nopieces').val();
-		$("#" + currentItem + " p").text(details + " x" + productQty);
+		
+		var itemsList = $("#sort2").children().children('p');
+		console.log(itemsList);
+
+		var i;
+		for(i = 0; i < itemsList.length; i++){
+			console.log(i + itemsList[i].innerHTML);
+			optionsPanelItem = itemsList[i].innerHTML;
+			if (!arr.includes(itemsList[i].innerHTML)){
+				itemsList[i].innerHTML = itemsList[i].innerHTML + " x" + productQty;
+				arr.push(itemsList[i].innerHTML);
+			}
+		}
+	
 		$('#modalNoPieces').hide();
 	}
 	
