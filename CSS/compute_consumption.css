@@ -5,13 +5,13 @@ select {
 
 div#dropdowns {
     padding: 20px;
-    background-color: lightgray;
+    background-color: #F7CF00;
     border-radius: 30px;
 }
 
 div#computation_result {
     padding: 20px;
-    background-color: lightgray;
+    background-color: #F7CF00;
     border-radius: 30px;
 }
 

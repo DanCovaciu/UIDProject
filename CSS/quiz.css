@@ -16,7 +16,7 @@ h1{
     margin: 0px;
     padding: 10px;
     font-size: 20px;
-    background-color: #444;
+    background-color: #616161;
     color: #fff;
 }
 
@@ -42,7 +42,7 @@ h1{
     margin-top: 50px;
     font-family: 'Work Sans', sans-serif;
     font-size: 22px;
-    background-color: #279;
+    background-color: #F7CF00;
     color: #fff;
     border: 0px;
     border-radius: 3px;
@@ -51,7 +51,7 @@ h1{
     margin-bottom: 50px;
 }
 .bttn:hover{
-    background-color: #38a;
+    background-color: #616161;
 }
 .slide{
     position: absolute;

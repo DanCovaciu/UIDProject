@@ -10,7 +10,7 @@ h1 {
 
 /* buttons page styling */
 .btns button {
-  background-color: #9acd32; 
+  background-color: #F7CF00; 
   border: 1px solid yellow; 
   color: white; 
   cursor:  url("https://findicons.com/files/icons/351/beach/128/sun.png"), auto;
@@ -22,7 +22,7 @@ h1 {
 }
 
 .btns button:hover {
-  background-color: #32cd32;
+  background-color: #616161;
 }
 
 .btns {
@@ -63,7 +63,7 @@ h1 {
 }
 
 #confirm, #cancel {
-	 background-color: #9acd32; 
+	 background-color: #F7CF00; 
 }
 
 /* data features page styling */
@@ -113,7 +113,7 @@ hr {
 .month {
   padding: 10px 10px;
   width: 100%;
-  background: #9acd32;
+  background: #F7CF00;
   text-align: center;
 }
 
