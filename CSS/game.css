@@ -2,10 +2,11 @@
     box-sizing: border-box;
   }
   #main {
+    margin-top: 500px;
     display: none;
     height: 60%;
-    overflow: auto;
     margin: auto;
+    overflow: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
   }
@@ -34,22 +35,98 @@
     background-image: -webkit-linear-gradient(bottom, #B30D5D 0%, #FB1886 100%);
     background-image:         linear-gradient(to bottom, #B30D5D 0%, #FB1886 100%);
   }
-
-  #gameContent{
-      margin-top: 100px;
-      margin-left: 400px;
-  }
   ul {
     list-style-type: none;
     }
 #game-over {
     display: none;
     text-align: center;
-    padding-top: 92px;
     z-index: 1;
-    width: 600px;
-    height: 360px;
     overflow: auto;
     margin: auto;
     position: absolute;
+}
+
+#menu{
+  width: 512px;
+  height: 512px;
+  background-image: url("../images/gameBackground.jpg");
+  margin-left: 400px;
+  margin-top: 70px;
+}
+ul{
+  margin-left: 530px;
+}
+h1{
+  margin-top: 100px;
+  margin-left: 530px;
+}
+
+h2{
+  margin-top: 200px;
+}
+
+#game-over{
+  width: 512px;
+  height: 512px;
+  background-image: url("../images/gameBackground.jpg");
+  margin-top: -500px;
+  margin-left: 400px;
+}
+
+#gameCanvas{
+  margin-top:-550px;
+  margin-left: 400px;
+}
+
+#restartBtn{
+  margin-left: 180px;
+}
+
+#leaderboard{
+  display: none;
+  width: 512px;
+  height: 512px;
+  background-image: url("../images/gameBackground.jpg");
+  text-align: center;
+  margin-top: -712px;
+  margin-left: 400px;
+}
+
+#leaderboardList{
+  margin-right: 50px;
+  text-align: center;
+  list-style: none;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#leaderboardText{
+  padding-top: 50px;
+  margin-bottom: 70px;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#backBtn{
+  margin-left: 175px;
+  margin-top: 100px;
+}
+
+#settings{
+  display: none;
+  width: 512px;
+  height: 512px;
+  background-image: url("../images/gameBackground.jpg");
+  text-align: center;
+  margin-top: -712px;
+  margin-left: 400px;
+}
+
+#score{
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
