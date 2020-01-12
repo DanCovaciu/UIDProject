@@ -1,6 +1,12 @@
 var details;
-var productQty;
 var totalCost = 0;
+var myMap = new Map(); 
+myMap.set('solar panel', 300);
+myMap.set('solar tank', 700);
+myMap.set('battery', 100);
+myMap.set('charge controller', 1000);
+myMap.set('power inverter', 200);
+myMap.set('generator', 400);
 
 $(document).ready(function (){
 
@@ -37,8 +43,10 @@ function viewSelectionsPanel() {
 			$('#modalNoPieces').show();
 		}
 		else {
-			// if the sender is list 2, keep only the items name
+			// restore price field to empty
+			$('#price').val('');
 			
+			// if the sender is list 2, keep only the items name
 			var itemsList = $("#sort1").children().children('p');
 			console.log(itemsList);
 
@@ -60,18 +68,10 @@ function viewSelectionsPanel() {
 	
 	$( "#sort1,#sort2" ).disableSelection();
 }
-
-var map = new Map([['solar panel', 300], ['solar tank', 700] ,['battery', 100],["charge controller", 1000],["power inverter", 200],["generator", 400]]); 
-
-var myMap = new Map(); 
-myMap.set('solar panel', 300);
-myMap.set('solar tank', 700);
-myMap.set('battery', 100);
-myMap.set('charge controller', 1000);
-myMap.set('power inverter', 200);
-myMap.set('generator', 400);
  
 function computeCost(){
+	// always when computing intialize with 0
+	totalCost = 0;
 	console.log("Computing cost...");
 	
 	var itemsList = $("#sort2").children().children('p');
@@ -84,7 +84,12 @@ function computeCost(){
 		var key = it.substring(0, it.indexOf('x') + 'x'.length - 2);
 		console.log(key);
 		console.log(myMap.get(key));
-		totalCost += parseInt(productQty) * myMap.get(key) ;
+		
+		// get qty by getting the number after x
+		var qty = it.match(/\d/g);
+		qty = qty.join("");
+		console.log(qty);
+		totalCost += parseInt(qty) * myMap.get(key) ;
 	}
 	
 	console.log("TotalCost: ", totalCost);
