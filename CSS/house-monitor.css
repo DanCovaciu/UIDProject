@@ -165,3 +165,7 @@ hr {
   text-align: center;
   overflow: scroll;
 }
+
+footer{
+  margin-bottom: -50px;
+}

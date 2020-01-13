@@ -89,7 +89,7 @@ $(document).ready((function() {
       });
   
       // show number of correct answers out of total
-      resultsContainer.innerHTML = `${numCorrect} out of ${questionList.length}`;
+      resultsContainer.innerHTML = `<h4>Your score: ${numCorrect} out of ${questionList.length}</h4>`;
     }
   
     function showSlide(n) {

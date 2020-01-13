@@ -70,7 +70,7 @@ footer{
     border-radius: 6px;
     top: 180px;
     left: 105%;
-   
+    margin-left: -20px;
     /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
