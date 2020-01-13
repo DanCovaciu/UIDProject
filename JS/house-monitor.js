@@ -50,7 +50,7 @@ function open_read_inverter_modal() {
 	 $("#dataFeatures").hide();
 	 $("#solarHouse").hide();
 	 $("#readInverter").show();
-	 $("#oldIndex").val(oldValue);
+	 $("#oldIndex").val(oldValue + " kW");
 }
 
 function open_system_data_modal() {

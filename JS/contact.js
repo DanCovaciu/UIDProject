@@ -56,6 +56,9 @@ function onButtonClick()
         if (contactName.value.length>=3 && validateEmail(contactEmail.value) && contactMessage.value.length>=10){
             var successBox = document.getElementById("alert");
             successBox.style.display = 'block';
+            contactMessage.value='';
+            contactEmail.value='';
+            contactName.value='';
         }
     }
     return false;
